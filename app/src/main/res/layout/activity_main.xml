@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📶 WiFi Room Mapper"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1E88E5"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Measure WiFi strength and speed at different locations in your room"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:paddingBottom="16dp" />
+
+        <!-- WiFi Connection Info -->
+        <TextView
+            android:id="@+id/wifi_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not connected"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <!-- Signal Strength -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGNAL STRENGTH"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/signal_strength_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan to see signal strength"
+            android:textSize="18sp"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/signal_percentage_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="#1E88E5"
+            android:padding="4dp" />
+
+        <ProgressBar
+            android:id="@+id/signal_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#4CAF50" />
+
+        <!-- Speed Test -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INTERNET SPEED"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/speed_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Press test button to measure speed"
+            android:textSize="18sp"
+            android:padding="4dp" />
+
+        <ProgressBar
+            android:id="@+id/speed_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#1E88E5" />
+
+        <!-- Location -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOCATION"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location: Not set"
+            android:textSize="16sp"
+            android:padding="4dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/scan_wifi_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📡 Scan WiFi"
+                android:marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/test_speed_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⚡ Test Speed"
+                android:marginStart="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/save_location_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📍 Set Location"
+                android:marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/add_measurement_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="➕ Add Measurement"
+                android:marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Log/History -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MEASUREMENT LOG"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:paddingTop="16dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:id="@+id/result_log_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log will appear here..."
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:padding="8dp"
+                android:background="#F5F5F5" />
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip: Move to different parts of the room, set the location, scan WiFi and test speed at each spot."
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
