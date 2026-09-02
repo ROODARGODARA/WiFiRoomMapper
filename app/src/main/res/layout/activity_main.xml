@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="📡 Scan WiFi"
-                android:marginEnd="8dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/test_speed_btn"
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="⚡ Test Speed"
-                android:marginStart="8dp" />
+                android:layout_marginStart="8dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="📍 Set Location"
-                android:marginEnd="8dp" />
+                android:layout_marginEnd="8dp" />
 
             <Button
                 android:id="@+id/add_measurement_btn"
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="➕ Add Measurement"
-                android:marginStart="8dp" />
+                android:layout_marginStart="8dp" />
         </LinearLayout>
 
         <!-- Log/History -->
